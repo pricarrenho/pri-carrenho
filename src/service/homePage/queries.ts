@@ -16,6 +16,27 @@ export const GET_HOME_PAGE = gql`
       footer {
         html
       }
+      image {
+        url
+      }
+      teches {
+        name
+        photo {
+          url
+        }
+        url
+      }
+      portfolios {
+        image {
+          url
+        }
+        name
+        description {
+          html
+        }
+        project
+        code
+      }
     }
   }
 `;
