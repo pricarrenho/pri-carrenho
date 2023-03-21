@@ -1,5 +1,5 @@
 const colors = {
-  black: "#13131a",
+  black: "#000000",
   white: "#ffffff",
   pink: {
     300: "#f9a8d4",
@@ -18,7 +18,7 @@ const colors = {
     600: "#525252",
     700: "#404040",
     800: "#262626",
-    900: "#171717",
+    900: "#13131a",
   },
 };
 
@@ -36,7 +36,7 @@ const font = {
 export const themeBlack = {
   colors: {
     ...colors,
-    background: colors.black,
+    background: colors.neutral[900],
   },
   font,
 };

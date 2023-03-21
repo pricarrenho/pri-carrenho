@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      color: ${theme.colors.white};
     }
 
     body,
@@ -38,6 +39,20 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
       text-decoration: none;
+      color: ${theme.colors.white};
+      font-size: ${theme.font.sizes.md};
+    }
+
+    h1 {
+      font-size: ${theme.font.sizes.xxl};
+    }
+
+    h2 {
+      font-size: ${theme.font.sizes.xl};
+    }
+
+    h3 {
+      font-size: ${theme.font.sizes.md};
     }
 
     li {
