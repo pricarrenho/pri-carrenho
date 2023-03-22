@@ -7,15 +7,16 @@ const Technologies = ({ technologies }: any) => {
   return (
     <S.Wrapper>
       <Title styleType="primary">Tecnologias e Ferramentas</Title>
+
       <S.WrapperContent>
         {technologies &&
           technologies.map((item: any) => (
             <S.Content href={item.url} target="_blank" key={item.name}>
-              <Image
+              <S.ImgTechs
                 alt={item.name}
                 src={item.photo.url}
-                width={48}
-                height={48}
+                width={40}
+                height={40}
               />
               <S.Subtitle>{item.name}</S.Subtitle>
             </S.Content>

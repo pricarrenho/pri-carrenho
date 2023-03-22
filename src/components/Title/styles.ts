@@ -6,18 +6,38 @@ type WrapperProps = {
 };
 
 const WrapperModifier = {
-  primary: () => css`
-    text-align: center;
-  `,
+  primary: () => css``,
+
   secondary: () => css`
-    text-align: left;
+    justify-content: center;
+
+    @media (min-width: 800px) {
+      justify-content: left;
+    }
   `,
 };
 
-export const Title = styled.h2<WrapperProps>`
-  ${({ theme, styleType }) => css`
-    margin-bottom: 24px;
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ styleType }) => css`
+    display: flex;
+    justify-content: center;
 
     ${styleType && WrapperModifier[styleType]()}
+  `}
+`;
+
+export const Title = styled.h2`
+  ${({ theme }) => css`
+    margin-bottom: 24px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      border-bottom: 2px solid ${theme.colors.neutral[500]};
+      left: 0;
+      bottom: -4px;
+    }
   `}
 `;

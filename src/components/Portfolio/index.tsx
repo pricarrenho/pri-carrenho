@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { Title } from "../Title/styles";
+import Title from "../Title";
 import * as S from "./styles";
 
 const Portfolio = ({ portfolio }: any) => {
   return (
     <S.Wrapper>
       <Title styleType="primary">Meu Portfolio</Title>
+
       {portfolio &&
         portfolio.map((item: any) => (
           <S.WrapperContent key={item.name}>

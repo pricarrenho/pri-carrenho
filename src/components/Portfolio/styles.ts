@@ -3,31 +3,47 @@ import Link from "next/link";
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-  margin-top: 148px;
-  margin-bottom: 148px;
+  margin-top: 64px;
+  margin-bottom: 64px;
+
+  @media (min-width: 800px) {
+    margin-top: 148px;
+    margin-bottom: 148px;
+  }
 `;
 
 export const WrapperContent = styled.div`
-  /* display: grid;
-  grid-template-columns: 1fr 500px;
-  gap: 48px; */
-  /* align-items: center; */
-  margin-top: 48px;
-  position: relative;
+  margin-top: 40px;
+  position: initial;
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: 800px) {
+    position: relative;
+    margin-top: 48px;
+  }
 `;
 
 export const Content = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    background-color: #0e0e11;
-    padding: 24px 48px;
+    gap: 16px;
+    background-color: initial;
+    padding: 16px;
     z-index: 1;
-    position: absolute;
-    width: 600px;
+    position: initial;
+    width: auto;
     bottom: 20px;
     left: 400px;
+
+    @media (min-width: 800px) {
+      position: absolute;
+      background-color: #0e0e11;
+      width: 600px;
+      gap: 24px;
+      padding: 24px 48px;
+    }
   `}
 `;
 
@@ -39,33 +55,64 @@ export const ContentButtons = styled.div`
 export const PortfolioImage = styled(Image)`
   object-fit: cover;
   border-radius: 4px;
-  width: 500px;
+  width: auto;
+  height: auto;
   display: block;
+
+  @media (min-width: 800px) {
+    width: 500px;
+  }
 `;
 
 export const Subtitle = styled.h3`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.lg};
-    color: ${theme.colors.pink[700]};
+    font-size: ${theme.font.sizes.md};
+    color: ${theme.colors.white};
+    position: relative;
+    margin-right: auto;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      border-bottom: 2px solid ${theme.colors.pink[700]};
+      left: 0;
+      bottom: 4px;
+      z-index: -1;
+    }
+
+    @media (min-width: 800px) {
+      font-size: ${theme.font.sizes.lg};
+    }
   `}
 `;
 
 export const Description = styled.div`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.md};
+    font-size: ${theme.font.sizes.sm};
     text-align: justify;
-    line-height: 28px;
+    line-height: 24px;
+
+    p {
+      color: ${theme.colors.neutral[300]};
+    }
 
     strong {
-      color: ${theme.colors.pink[700]};
+      color: ${theme.colors.white};
+    }
+
+    @media (min-width: 800px) {
+      font-size: ${theme.font.sizes.md};
+      line-height: 28px;
     }
   `}
 `;
 
 export const Button = styled(Link)`
   ${({ theme }) => css`
-    border: 1px solid ${theme.colors.pink[700]};
-    padding: 8px 16px;
+    border: 2px solid ${theme.colors.pink[700]};
+    font-weight: 500;
+    padding: 8px 14px;
     color: ${theme.colors.pink[700]};
     overflow: hidden;
     position: relative;
@@ -91,6 +138,10 @@ export const Button = styled(Link)`
       &::before {
         width: 250%;
       }
+    }
+
+    @media (min-width: 800px) {
+      padding: 8px 16px;
     }
   `}
 `;

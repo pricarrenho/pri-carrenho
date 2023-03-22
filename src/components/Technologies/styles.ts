@@ -1,16 +1,25 @@
+import Image from "next/image";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-  margin-top: 148px;
+  margin-top: 64px;
+
+  @media (min-width: 800px) {
+    margin-top: 148px;
+  }
 `;
 
 export const WrapperContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 48px;
+  gap: 24px;
   margin-top: 48px;
+
+  @media (min-width: 800px) {
+    gap: 48px;
+  }
 `;
 
 export const Content = styled(Link)`
@@ -29,4 +38,8 @@ export const Content = styled(Link)`
 
 export const Subtitle = styled.h3`
   ${({ theme }) => css``}
+`;
+
+export const ImgTechs = styled(Image)`
+  object-fit: cover;
 `;

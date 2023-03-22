@@ -40,19 +40,35 @@ export const GlobalStyle = createGlobalStyle`
     a {
       text-decoration: none;
       color: ${theme.colors.white};
-      font-size: ${theme.font.sizes.md};
+      font-size: ${theme.font.sizes.sm};
+
+      @media (min-width: 800px) {
+        font-size: ${theme.font.sizes.md};
+      }
     }
 
     h1 {
-      font-size: ${theme.font.sizes.xxl};
+      font-size: ${theme.font.sizes.xl};
+
+      @media (min-width: 800px) {
+        font-size: ${theme.font.sizes.xxl};
+      }
     }
 
     h2 {
-      font-size: ${theme.font.sizes.xl};
+      font-size: ${theme.font.sizes.lg};
+
+      @media (min-width: 800px) {
+        font-size: ${theme.font.sizes.xl};
+      }
     }
 
     h3 {
-      font-size: ${theme.font.sizes.md};
+      font-size: ${theme.font.sizes.ssm};
+
+      @media (min-width: 800px) {
+        font-size: ${theme.font.sizes.md};
+      }
     }
 
     li {

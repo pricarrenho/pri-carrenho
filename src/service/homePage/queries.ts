@@ -19,7 +19,7 @@ export const GET_HOME_PAGE = gql`
       image {
         url
       }
-      teches {
+      teches(first: 20) {
         name
         photo {
           url
