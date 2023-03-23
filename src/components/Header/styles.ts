@@ -21,7 +21,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.div`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.md};
+    font-size: ${theme.font.sizes.mmd};
     position: relative;
     min-height: 32px;
     margin-bottom: 24px;

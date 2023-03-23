@@ -26,7 +26,8 @@ const font = {
   sizes: {
     ssm: "1rem",
     sm: "1.4rem",
-    md: "1.6rem",
+    mmd: "1.6rem",
+    md: "1.8rem",
     lg: "2.4rem",
     xl: "3.2rem",
     xxl: "6.4rem",

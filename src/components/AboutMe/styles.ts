@@ -38,7 +38,7 @@ export const Description = styled.div`
     }
 
     @media (min-width: 800px) {
-      font-size: ${theme.font.sizes.md};
+      font-size: ${theme.font.sizes.mmd};
     }
   `}
 `;
