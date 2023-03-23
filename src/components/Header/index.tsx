@@ -1,6 +1,7 @@
 import { HeaderProps } from "./types";
 import * as S from "./styles";
 import Typewriter from "typewriter-effect";
+import SocialMedia from "../SocialMedia";
 
 const Header = ({ title, subtitle }: HeaderProps) => {
   return (
@@ -14,6 +15,8 @@ const Header = ({ title, subtitle }: HeaderProps) => {
           }}
         />
       </S.Subtitle>
+
+      <SocialMedia />
     </S.Wrapper>
   );
 };

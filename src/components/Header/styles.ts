@@ -24,6 +24,7 @@ export const Subtitle = styled.div`
     font-size: ${theme.font.sizes.md};
     position: relative;
     min-height: 32px;
+    margin-bottom: 24px;
 
     strong {
       color: ${theme.colors.pink[700]};

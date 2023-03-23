@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const WrapperContent = styled.div`
   display: flex;
   gap: 40px;
   align-items: center;
@@ -19,6 +19,12 @@ export const Content = styled.div`
     flex-direction: initial;
     gap: 48px;
   }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 `;
 
 export const Description = styled.div`

@@ -77,7 +77,7 @@ export const Subtitle = styled.h3`
       width: 100%;
       border-bottom: 2px solid ${theme.colors.pink[700]};
       left: 0;
-      bottom: 4px;
+      bottom: 2px;
       z-index: -1;
     }
 
