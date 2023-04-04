@@ -6,7 +6,7 @@
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-preview">Preview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>
 </p>
 
 ## 🧪 Technologies
@@ -28,6 +28,14 @@ Clone the project and access the folder
 
 ```bash
 $ git clone https://github.com/pricarrenho/pri-carrenho && cd pri-carrenho
+```
+
+Add environment
+
+```bash
+# Add your environment variable based on .env.example
+NEXT_PUBLIC_GRAPHQL_URL=//add here your graphql url
+
 ```
 
 Follow the steps below
@@ -56,6 +64,10 @@ $ yarn start
 
 [Pri Carrenho](https://www.pricarrenho.com.br) was developed to validate knowledge in NextJS.
 
+<br/>
+
 ---
 
-<p align="center">Made with 💜 by Priscilla Carrenho</p>
+<p align="center">
+Made with 💜 by <a href="https://www.pricarrenho.com.br">Priscilla Carrenho</a> 
+</p>
