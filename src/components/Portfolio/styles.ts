@@ -3,6 +3,8 @@ import Link from "next/link";
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-top: 64px;
   margin-bottom: 64px;
 
@@ -13,14 +15,21 @@ export const Wrapper = styled.div`
 `;
 
 export const WrapperContent = styled.div`
-  margin-top: 40px;
-  position: initial;
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
+  gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 16px;
 
   @media (min-width: 800px) {
-    position: relative;
-    margin-top: 48px;
+    flex-direction: row;
+    margin-top: 56px;
+    margin-bottom: 36px;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
   }
 `;
 
@@ -32,17 +41,9 @@ export const Content = styled.div`
     background-color: initial;
     padding: 16px;
     z-index: 1;
-    position: initial;
-    width: auto;
-    bottom: 20px;
-    left: 400px;
 
     @media (min-width: 800px) {
-      position: absolute;
-      background-color: #0e0e11;
-      width: 600px;
       gap: 24px;
-      padding: 24px 48px;
     }
   `}
 `;
@@ -53,14 +54,14 @@ export const ContentButtons = styled.div`
 `;
 
 export const PortfolioImage = styled(Image)`
-  object-fit: cover;
   border-radius: 4px;
-  width: auto;
-  height: auto;
+  width: 343px;
+  height: 206px;
   display: block;
 
   @media (min-width: 800px) {
-    width: 500px;
+    min-width: 500px;
+    min-height: 320px;
   }
 `;
 
@@ -113,7 +114,7 @@ export const Button = styled(Link)`
     border: 2px solid ${theme.colors.pink[700]};
     font-weight: 500;
     padding: 8px 14px;
-    color: ${theme.colors.pink[700]};
+    color: ${theme.colors.white};
     overflow: hidden;
     position: relative;
     transition-delay: 0.2s;
