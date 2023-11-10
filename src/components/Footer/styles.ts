@@ -12,14 +12,14 @@ export const Wrapper = styled.div`
       position: absolute;
       font-size: 24px;
       font-weight: 600;
-      top: -18px;
+      top: -14px;
       left: 50%;
       transform: translateX(-50%);
       color: ${theme.colors.pink[700]};
 
       @media (min-width: 800px) {
         font-size: 32px;
-        top: -24px;
+        top: -18px;
       }
     }
 
