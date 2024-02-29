@@ -57,6 +57,8 @@ export const PortfolioImage = styled(Image)`
   border-radius: 4px;
   width: 343px;
   height: 206px;
+  object-fit: cover;
+  object-position: top;
   display: block;
 
   @media (min-width: 800px) {
