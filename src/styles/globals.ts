@@ -37,6 +37,16 @@ export const GlobalStyle = createGlobalStyle`
       background: ${theme.colors.background};
     }
 
+    body {
+      &.blocked {
+        overflow: hidden;
+      }
+    }
+
+    html {
+      scrollbar-gutter: stable;
+    }
+
     a {
       text-decoration: none;
       color: ${theme.colors.white};

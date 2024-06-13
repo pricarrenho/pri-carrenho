@@ -58,7 +58,7 @@ export const PortfolioImage = styled(Image)`
   width: 343px;
   height: 206px;
   object-fit: cover;
-  object-position: top;
+  object-position: top center;
   display: block;
 
   @media (min-width: 800px) {
@@ -147,4 +147,15 @@ export const Button = styled(Link)`
       padding: 8px 16px;
     }
   `}
+`;
+
+export const ButtonModal = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  transition: 0.3s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
 `;

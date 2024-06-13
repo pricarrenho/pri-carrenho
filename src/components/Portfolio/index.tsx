@@ -1,13 +1,26 @@
+import { useState } from "react";
+import { Modal } from "../Modal";
+import { Portfolio, PortfolioProps } from "./types";
 import Title from "../Title";
 import * as S from "./styles";
+import { disableBodyScroll } from "@/utils/blockScroll";
 
-const Portfolio = ({ portfolio }: any) => {
+const Portfolio = ({ portfolio }: PortfolioProps) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [photo, setPhoto] = useState<Portfolio>();
+
+  const handleOpenModal = (photo: Portfolio) => {
+    setIsModalOpen((current) => !current);
+    setPhoto(photo);
+
+    disableBodyScroll();
+  };
+
   return (
     <S.Wrapper>
       <Title styleType="primary">Meu Portfolio</Title>
-
       {portfolio &&
-        portfolio.map((item: any) => (
+        portfolio.map((item) => (
           <S.WrapperContent key={item.name}>
             <S.Content>
               <S.Subtitle>{item.name}</S.Subtitle>
@@ -26,14 +39,20 @@ const Portfolio = ({ portfolio }: any) => {
               </S.ContentButtons>
             </S.Content>
 
-            <S.PortfolioImage
-              src={item.image.url}
-              alt={item.name}
-              width={700}
-              height={400}
-            />
+            <S.ButtonModal onClick={() => handleOpenModal(item)}>
+              <S.PortfolioImage
+                src={item.image.url}
+                alt={item.name}
+                width={700}
+                height={400}
+              />
+            </S.ButtonModal>
           </S.WrapperContent>
         ))}
+
+      {isModalOpen && photo && (
+        <Modal setIsOpen={setIsModalOpen} image={photo} />
+      )}
     </S.Wrapper>
   );
 };

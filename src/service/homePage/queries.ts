@@ -29,6 +29,7 @@ export const GET_HOME_PAGE = gql`
       portfolios {
         image {
           url
+          height
         }
         name
         description {
