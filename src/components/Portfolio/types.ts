@@ -9,7 +9,7 @@ export type Portfolio = {
   };
   image: {
     url: string;
-    height: number;
+    height?: number | null | undefined;
   };
   name: string;
   project: string;
