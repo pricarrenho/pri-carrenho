@@ -5,10 +5,10 @@ import * as S from "./styles";
 
 type ModalProps = {
   setIsOpen: (value: boolean) => void;
-  image: Portfolio;
+  project: Portfolio;
 };
 
-export const Modal = ({ setIsOpen, image }: ModalProps) => {
+export const Modal = ({ setIsOpen, project }: ModalProps) => {
   const handleOutsideClick = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
@@ -34,10 +34,10 @@ export const Modal = ({ setIsOpen, image }: ModalProps) => {
 
         <S.ModalBody>
           <S.PortfolioPhoto
-            src={image.image.url}
-            alt={image.name}
+            src={project.image.url}
+            alt={project.name}
             width={1200}
-            height={image.image.height || 400}
+            height={project.image.height}
           />
         </S.ModalBody>
       </S.Modal>

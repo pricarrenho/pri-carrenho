@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { Modal } from "../Modal";
 import { Portfolio, PortfolioProps } from "./types";
+import { disableBodyScroll } from "@/utils/blockScroll";
 import Title from "../Title";
 import * as S from "./styles";
-import { disableBodyScroll } from "@/utils/blockScroll";
 
 const Portfolio = ({ portfolio }: PortfolioProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [photo, setPhoto] = useState<Portfolio>();
+  const [project, setProject] = useState<Portfolio>();
 
-  const handleOpenModal = (photo: Portfolio) => {
+  const handleOpenModal = (project: Portfolio) => {
     setIsModalOpen((current) => !current);
-    setPhoto(photo);
-
+    setProject(project);
     disableBodyScroll();
   };
 
@@ -50,8 +49,8 @@ const Portfolio = ({ portfolio }: PortfolioProps) => {
           </S.WrapperContent>
         ))}
 
-      {isModalOpen && photo && (
-        <Modal setIsOpen={setIsModalOpen} image={photo} />
+      {isModalOpen && project && (
+        <Modal setIsOpen={setIsModalOpen} project={project} />
       )}
     </S.Wrapper>
   );
