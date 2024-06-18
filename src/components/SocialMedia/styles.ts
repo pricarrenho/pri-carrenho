@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
-    gap: 8px;
+    gap: 16px;
     margin-left: 50px;
     position: relative;
 
@@ -13,16 +13,19 @@ export const Wrapper = styled.div`
       position: absolute;
       width: 40px;
       border-bottom: 1px solid ${theme.colors.pink[700]};
-      left: -50px;
+      left: -60px;
       bottom: 50%;
     }
   `}
 `;
 
 export const ImgLink = styled(Link)`
-  &:hover {
-    img {
-      filter: brightness(2);
+  ${({ theme }) => css`
+    color: ${theme.colors.neutral[400]};
+    transition: color 0.2s;
+
+    &:hover {
+      color: ${theme.colors.white};
     }
-  }
+  `}
 `;

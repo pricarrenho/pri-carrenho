@@ -15,6 +15,7 @@ const AboutMe = ({ description, image }: AboutMeProps) => {
           alt="Imagem de um notebook aberto e duas mãos segurando um café a sua frente"
           width={550}
           height={340}
+          loading="eager"
         />
       </S.WrapperContent>
     </S.Wrapper>
