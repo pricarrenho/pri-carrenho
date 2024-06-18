@@ -37,7 +37,7 @@ export const Modal = ({ setIsOpen, project }: ModalProps) => {
             src={project.image.url}
             alt={project.name}
             width={1200}
-            height={project.image.height}
+            height={project.image.height || undefined}
           />
         </S.ModalBody>
       </S.Modal>
