@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Modal } from "../Modal";
-import { Portfolio, PortfolioProps } from "./types";
+import type { Portfolio, PortfolioProps } from "./types";
 import { disableBodyScroll } from "@/utils/blockScroll";
 import Title from "../Title";
 import * as S from "./styles";

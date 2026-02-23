@@ -10,25 +10,23 @@
     "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
-    "@next/font": "^13.2.4",
-    "@types/node": "18.15.3",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
+    "eslint-config-next": "^16.1.6",
     "graphql": "^16.6.0",
     "graphql-request": "^5.2.0",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-icons": "^5.2.1",
-    "styled-components": "^5.3.9",
-    "typescript": "5.0.2",
+    "styled-components": "^6.3.11",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^3.2.2",
     "@graphql-codegen/client-preset": "^2.1.1",
-    "@types/styled-components": "^5.1.26"
+    "@types/node": "^25.3.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^10.0.1",
+    "typescript": "^5.9.3"
   }
 }
